@@ -1,0 +1,26 @@
+
+ 
+<div class="d-flex">
+    <table class="table table-hover margin bottom">
+        <thead>
+        <tr>
+          <th style="width: 1%" class="text-center">N</th>
+          <th>Produit</th>
+          <th class="text-center">Qte</th>
+          <th class="text-center">price</th>
+        </tr>
+        </thead>
+        <tbody>
+           
+             
+            <tr *ngFor="let item of products ; let i = index">
+              <td class="text-center">{{i+1}}</td>
+              <td> <h5>{{item.produitComande.name}}</h5> </td>
+              <td class="text-center small">
+                <input type="number" [(ngModel)]="item.quantite" class="form-control text-center" value="1"></td>
+              <td class="text-center"><span class="label label-primary">{{item.produitComande.price}}</span></td>
+            </tr> 
+
+        </tbody>
+      </table>
+</div>

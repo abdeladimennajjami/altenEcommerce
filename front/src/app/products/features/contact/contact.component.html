@@ -1,0 +1,18 @@
+<h1 class="text-center">Contact</h1>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSave()">
+    <div class="form-field">
+      <label for="name">Email</label>
+      <input pInputText formControlName="email" type="email" id="email" name="email" [(ngModel)]="email" required>
+    </div>
+
+    <div class="form-field">
+      <label for="description">Message</label>
+      <textarea pInputTextarea formControlName="message"
+        id="message" name="message" [(ngModel)]="message" rows="5"  cols="30" maxlength="50" required>
+      </textarea>
+    </div>
+     <div class="flex justify-content-between">
+      <p-button type="submit"  (click)="onEnvoyer()" label="Envoyer" severity="success"/>
+    </div> 
+  </form>
